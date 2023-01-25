@@ -1,9 +1,11 @@
 import React from "react";
+import Banner from "../components/Banner.js";
+import BannerImg from "../assets/banner_img.png";
 
 const Home = () => {
     return (
         <div>
-            <p>Ceci est ma Home Page</p>
+            <Banner bannerImg={BannerImg} />
         </div>
     );
 };
