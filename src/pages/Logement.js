@@ -1,12 +1,15 @@
+import React from "react";
 import { useParams } from "react-router-dom";
 import logements from "../data/logements.json";
 import Carousel from "../components/Carousel.js";
+import Tags from "../components/Tags.js";
+import Collapse from "../components/Collapse.js";
 
 const Logement = () => {
     let paramsId = useParams();
 
     const logement = logements.find((theOne) => theOne.id === paramsId.id);
-    // utilisaiton de la destructuration:
+    // utilisation de la destructuration:
     const {
         id,
         title,
@@ -22,10 +25,29 @@ const Logement = () => {
     // console.log(logement);
 
     return (
-        <div>
-            <main>{logement.title}</main>
+        <main>
             <Carousel props={pictures} />
-        </div>
+            <div>
+                <div className="logement__description--left">
+                    <div>{title}</div>
+                    <div>{location}</div>
+                    <Tags keywords={tags} />
+                </div>
+                <div className="logement__description-right">
+                    <div>
+                        <span>{host.name}</span>
+                        <img src={host.picture} />
+                    </div>
+                    <div>{rating}</div>
+                </div>
+            </div>
+            <div>
+                <Collapse
+                    collapseTitle="Description"
+                    collapseContent={description}
+                />
+            </div>
+        </main>
     );
 };
 
