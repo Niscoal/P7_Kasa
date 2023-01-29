@@ -10,7 +10,7 @@ const Home = () => {
             <Banner bannerImg={BannerImg} />
             <div>
                 {Logements.map((logement) => {
-                    return <Thumb key={logement.id} props={logement} />;
+                    return <Thumb key={logement.id} details={logement} />;
                 })}
             </div>
         </div>
