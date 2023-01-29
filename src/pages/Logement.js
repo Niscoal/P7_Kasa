@@ -46,6 +46,10 @@ const Logement = () => {
                     collapseTitle="Description"
                     collapseContent={description}
                 />
+                <Collapse
+                    collapseTitle="Équipements"
+                    collapseContent={equipments}
+                />
             </div>
         </main>
     );
