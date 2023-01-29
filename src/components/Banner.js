@@ -1,10 +1,10 @@
 import React from "react";
 import bannerBgFilter from "../assets/banner_bgFilter.png";
 
-const Banner = ({ bannerImg }) => {
+const Banner = (props) => {
     return (
         <div>
-            <img src={bannerImg} alt="banner : forest and sea"></img>
+            <img src={props.bannerImg} alt={props.alt}></img>
             <img src={bannerBgFilter} alt="Background filter"></img>
         </div>
     );
