@@ -30,7 +30,6 @@ const Carousel = ({ props }) => {
                         {index === displayPicture && (
                             <img src={picture} alt="" />
                         )}
-                        {console.log(index)}
                     </div>
                 );
             })}
