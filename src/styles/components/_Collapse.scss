@@ -11,6 +11,14 @@
     @media screen and (min-width: 768px) {
         width: 582px;
     }
+
+    .collapseUp {
+        @media screen and (min-width: 1200px) {
+            height: 52px;
+            align-items: center;
+            font-size: 18px;
+        }
+    }
 }
 
 .collapseBig {
@@ -50,6 +58,7 @@
     background-color: $colorTertiary;
     border-radius: 5px;
     color: $colorSecondary;
+    line-height: 17px;
 
     ul,
     p {
@@ -60,6 +69,7 @@
 
         @media screen and (min-width: 768px) {
             font-size: 15px;
+            line-height: 26px;
         }
         @media screen and (min-width: 1200px) {
             padding-left: 20px;
