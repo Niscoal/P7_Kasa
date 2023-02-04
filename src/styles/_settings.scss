@@ -7,6 +7,12 @@ $colorPrimary: #ffffff;
 $colorSecondary: #ff6060;
 $colorTertiary: #f7f7f7;
 
+#root,
+body,
+html {
+    height: 100%;
+}
+
 * {
     box-sizing: border-box;
     font-family: $font;
