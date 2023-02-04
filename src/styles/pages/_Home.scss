@@ -10,11 +10,16 @@
     @media screen and (min-width: 768px) {
         background: $colorTertiary;
         padding-top: 50px;
+        margin-top: 20px;
         justify-content: center;
+        gap: 30px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1180px) {
         max-width: 1240px;
         margin: 0 auto;
+        padding-top: 56px;
+        margin-top: 43px;
+        gap: 40px;
     }
 }
