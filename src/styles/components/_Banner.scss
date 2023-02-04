@@ -1,0 +1,53 @@
+.banner {
+    display: flex;
+    max-width: 1240px;
+    min-height: 111px;
+    max-height: 223px;
+    position: relative;
+    min-height: 111px;
+    margin: 0 auto;
+    margin-bottom: 22px;
+    &Img,
+    &Filter {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    &Filter {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        background: #000000;
+        mix-blend-mode: darken;
+        opacity: 0.3;
+    }
+
+    .bannerText {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 100%;
+        color: $colorPrimary;
+
+        span {
+            padding-left: 5px;
+        }
+
+        @media screen and (min-width: 1226px) {
+            font-size: 48px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+    }
+}

@@ -1,0 +1,25 @@
+.grey {
+    color: #e3e3e3;
+}
+
+.stars {
+    display: flex;
+    font-size: medium;
+
+    @media screen and (min-width: 768px) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    i {
+        padding-left: 5px;
+
+        @media screen and (min-width: 1024px) {
+            padding-left: 10px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: x-large;
+    }
+}

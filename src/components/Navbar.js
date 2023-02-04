@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     return (
         <header>
-            <img src={logo} alt="logo Kasa"></img>
+            <img src={logo} alt="logo Kasa" className="logo"></img>
             <nav>
                 <Link to="/Home">Accueil</Link>
                 <Link to="/About">A Propos</Link>

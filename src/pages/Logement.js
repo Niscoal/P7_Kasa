@@ -4,6 +4,7 @@ import logements from "../data/logements.json";
 import Carousel from "../components/Carousel.js";
 import Tags from "../components/Tags.js";
 import Collapse from "../components/Collapse.js";
+import Rating from "../components/Rating";
 
 const Logement = () => {
     try {
@@ -12,7 +13,6 @@ const Logement = () => {
 
         // utilisation de la destructuration:
         const {
-            id,
             title,
             pictures,
             description,
@@ -25,29 +25,31 @@ const Logement = () => {
 
         return (
             <main>
-                <Carousel props={pictures} />
-                <div>
-                    <div className="logement__description--left">
-                        <div>{title}</div>
-                        <div>{location}</div>
+                <Carousel slide={pictures} altName={title} />
+                <div className="description">
+                    <div className="description__left">
+                        <h1>{title}</h1>
+                        <h2>{location}</h2>
                         <Tags keywords={tags} />
                     </div>
-                    <div className="logement__description-right">
-                        <div>
+                    <div className="description__right">
+                        <div className="host__informations">
                             <span>{host.name}</span>
-                            <img src={host.picture} />
+                            <img src={host.picture} alt="Host" />
                         </div>
-                        <div>{rating}</div>
+                        <Rating base={5} note={Number(rating)} />
                     </div>
                 </div>
-                <div>
+                <div className="collapseContent">
                     <Collapse
                         collapseTitle="Description"
                         collapseContent={description}
+                        collapseSize="collapseSmall"
                     />
                     <Collapse
                         collapseTitle="Équipements"
                         collapseContent={equipments}
+                        collapseSize="collapseSmall"
                     />
                 </div>
             </main>

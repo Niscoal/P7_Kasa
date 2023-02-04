@@ -9,8 +9,13 @@ const Home = () => {
     try {
         return (
             <div>
-                <Banner bannerImg={BannerImg} alt="banner : forest and sea" />
-                <main>
+                <Banner
+                    bannerImg={BannerImg}
+                    alt="banner : forest and sea"
+                    text0="Chez vous,"
+                    text1=" partout et ailleurs"
+                />
+                <main className="thumbsLayout">
                     {Logements.map((logement) => {
                         return <Thumb key={logement.id} details={logement} />;
                     })}

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import nextArrow from "../assets/nextArrow.png";
 import previousArrow from "../assets/previousArrow.png";
 
-const Carousel = ({ props }) => {
+const Carousel = (props) => {
     const [displayPicture, setPicture] = useState(0);
-    const length = props.length;
+    const length = props.slide.length;
 
     const nextSlide = () => {
         if (displayPicture === length - 1) {
@@ -23,12 +23,16 @@ const Carousel = ({ props }) => {
     };
 
     return (
-        <div>
-            {props.map((picture, index) => {
+        <div className="carousel">
+            {props.slide.map((picture, index) => {
                 return (
                     <div key={index}>
                         {index === displayPicture && (
-                            <img src={picture} alt="" />
+                            <img
+                                src={picture}
+                                alt={props.altName}
+                                className="picture"
+                            />
                         )}
                     </div>
                 );
@@ -36,13 +40,23 @@ const Carousel = ({ props }) => {
             {length > 1 ? (
                 <>
                     <div onClick={nextSlide}>
-                        <img src={nextArrow}></img>
+                        <img
+                            src={nextArrow}
+                            alt="Next slide"
+                            className="arrow right"
+                        ></img>
                     </div>
                     <div onClick={previousSlide}>
-                        <img src={previousArrow}></img>
+                        <img
+                            src={previousArrow}
+                            alt="Previous slide"
+                            className="arrow left"
+                        ></img>
                     </div>
-                    <div>
-                        {displayPicture + 1}/{length}
+                    <div className="count">
+                        <span>
+                            {displayPicture + 1}/{length}
+                        </span>
                     </div>
                 </>
             ) : null}

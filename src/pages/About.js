@@ -8,13 +8,14 @@ const About = () => {
     return (
         <div>
             <Banner bannerImg={about_banner_img} alt="Banner : moutains" />
-            <main>
+            <main className="collapseContent--about">
                 {about.map((worth, index) => {
                     return (
                         <Collapse
                             key={index}
                             collapseTitle={worth.title}
                             collapseContent={worth.text}
+                            collapseSize="collapseBig"
                         />
                     );
                 })}
