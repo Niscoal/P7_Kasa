@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     color: $colorSecondary;
+    text-align: center;
 
     h1 {
         font-size: 96px;
@@ -21,16 +22,21 @@
     h2 {
         font-size: 18px;
         font-weight: 500;
-        margin: 0;
+        margin-bottom: 133px;
 
         @media screen and (min-width: 950px) {
             font-size: 36px;
-            margin-bottom: 133px;
+            margin-bottom: 182px;
         }
     }
 
     a {
         color: $colorSecondary;
         text-decoration: underline;
+        font-size: 14px;
+
+        @media screen and (min-width: 950px) {
+            font-size: 18px;
+        }
     }
 }
