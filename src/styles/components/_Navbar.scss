@@ -27,3 +27,9 @@ header {
 .current {
     text-decoration: underline;
 }
+
+.linkAbout {
+    @media screen and (min-width: 768px) {
+        padding-left: 57px;
+    }
+}
