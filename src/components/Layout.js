@@ -9,6 +9,7 @@ const Layout = () => {
             <div className="container">
                 <Navbar />
                 <Outlet />
+                {/* display child elements */}
             </div>
             <div className="footerDiv">
                 <Footer />

@@ -16,6 +16,7 @@ const Home = () => {
                     text1=" partout et ailleurs"
                 />
                 <main className="thumbsLayout">
+                    {/* display a Thumbnail for each logement object ; details is a prop */}
                     {Logements.map((logement) => {
                         return <Thumb key={logement.id} details={logement} />;
                     })}

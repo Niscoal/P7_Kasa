@@ -8,10 +8,11 @@ import Rating from "../components/Rating";
 
 const Logement = () => {
     try {
-        let paramsId = useParams();
+        let paramsId = useParams(); // paramsId is an object with the current ID
         const logement = logements.find((theOne) => theOne.id === paramsId.id);
+        // Find the "logement" object corresponding to the ID passed in the URL
 
-        // utilisation de la destructuration:
+        // destructuration:
         const {
             title,
             pictures,
@@ -38,6 +39,7 @@ const Logement = () => {
                             <img src={host.picture} alt="Host" />
                         </div>
                         <Rating base={5} note={Number(rating)} />
+                        {/* define a base if rating basis change */}
                     </div>
                 </div>
                 <div className="collapseContent">

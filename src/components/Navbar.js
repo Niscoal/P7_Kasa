@@ -12,6 +12,7 @@ const Navbar = () => {
             <nav>
                 <NavLink
                     to="/Home"
+                    // isActive define if the current path is selected
                     className={({ isActive }) =>
                         isActive ? "linkHome current" : "linkHome"
                     }
